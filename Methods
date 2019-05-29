@@ -1,0 +1,29 @@
+public class Grades {
+    double goalGrade;
+    double percentOfGrade;
+    double currentGrade;
+    double assignementWeight;
+    double assignementGrade;
+   
+    public Grades(double gGrade, double perOfG, double cuGrade, double assigW, double assigG){
+        gGrade= goalGrade;
+        perOfG= percentOfGrade;
+        cuGrade= currentGrade;
+        assigW= assignementWeight;
+        assigG= assignementGrade;
+    }
+    
+    public static double examCalc (double gradeBefore, double examWeight, double gradeGoal){
+        double examW= examWeight/100;
+        double classW= 1-examW;
+        double markNeed= (gradeGoal-gradeBefore*classW)/examW;
+        return Math.round(markNeed*100.0)/100.0; // rounds to 2 places
+    }
+    
+    public static double gradeCalc (double gradeCurrent,double perOfGrade,double assigG, double assigW){
+        double newGrade= (((gradeCurrent*perOfGrade/100)+ (assigG*assigW/100))/ (perOfGrade+ assigW)) *100;
+        perOfGrade= perOfGrade+ assigW;
+        return Math.round(newGrade*100.0)/100.0; // rounds to 2 places
+    }
+    
+}
