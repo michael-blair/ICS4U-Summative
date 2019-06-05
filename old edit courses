@@ -1,0 +1,36 @@
+count +=1; 
+        if (count==1){
+            Grades periodA= new Grades (" ",0,0,0,0,0);
+            periodA.courseName= className.getText(); 
+            periodA.goalGrade= Double.parseDouble(classGoal.getText());
+            label.setText(periodA.courseName +" is your first class.");
+            className.setText(null);
+            classGoal.setText(null);
+        } else if (count==2){
+            Grades periodB= new Grades (" ",0,0,0,0,0);
+            periodB.courseName= className.getText(); 
+            periodB.goalGrade= Double.parseDouble(classGoal.getText());
+            label.setText(periodB.courseName +" is your second class.");
+            className.setText(null);
+            classGoal.setText(null);
+        }else if (count==3){ 
+            Grades periodC= new Grades (" ",0,0,0,0,0);
+            periodC.courseName= className.getText(); 
+            periodC.goalGrade= Double.parseDouble(classGoal.getText());
+            label.setText(periodC.courseName +" is your third class.");
+            className.setText(null);
+            classGoal.setText(null);
+        }else if (count==4){
+            Grades periodD= new Grades (" ",0,0,0,0,0);
+            periodD.courseName= className.getText(); 
+            periodD.goalGrade= Double.parseDouble(classGoal.getText());
+            label.setText(periodD.courseName +" is your fourth class.");
+            className.setText(null);
+            classGoal.setText(null);
+        } else {
+            label.setText("Error! You have entered all 4 classes for this semester"); 
+            goButton.setEnabled(false);
+        }
+        
+        
+    }                                        
